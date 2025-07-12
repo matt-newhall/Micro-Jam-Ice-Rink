@@ -1,0 +1,1 @@
+obj_Player.trick_cooldown = false;
