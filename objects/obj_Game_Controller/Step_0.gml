@@ -9,14 +9,27 @@ if (obj_Player.trick_cooldown && obj_Player.is_player_idle && !alarm[2]) {
 	alarm[2] = game_get_speed(gamespeed_fps) * 3;
 }
 
-if (score_value >= 1500 && !is_first_tonya_spawned && !alarm[4]) {
+if (score_value >= 1000 && !is_first_tonya_spawned && !alarm[4]) {
 	is_first_tonya_spawned = true;
 	alarm[4] = game_get_speed(gamespeed_fps) * 0.05;
+	alarm[6] = game_get_speed(gamespeed_fps);
 }
 
-if (score_value >= 3000 && !is_second_tonya_spawned && !alarm[5]) {
+if (score_value >= 1500 && !is_second_tonya_spawned && !alarm[5]) {
 	is_second_tonya_spawned = true;
 	alarm[5] = game_get_speed(gamespeed_fps) * 0.05;
+	alarm[7] = game_get_speed(gamespeed_fps);
+}
+
+
+if (score_value >= 1000 && !has_fan_increase_2_played) {
+	has_fan_increase_2_played = true;
+	audio_play_sound(snd_Fan_Increase_2, 100, false);
+}
+
+if (score_value >= 250 && !has_fan_increase_1_played) {
+	has_fan_increase_1_played = true;
+	audio_play_sound(snd_Fan_Increase_1, 100, false);
 }
 
 
@@ -32,22 +45,18 @@ if (score_value >= 100 && !spotlight_triggered) {
 
 if (meter_value <= 0 && !game_over) {
     game_over = true;
+	audio_play_sound(snd_Game_over, 100, false);
 	
 	obj_Player.state = PlayerState.LOSS;
 
-    instance_deactivate_all(true);
-    instance_activate_object(object_index);
     instance_activate_object(obj_Player);
-
-    instance_activate_object(obj_Audience_Left);
-	instance_activate_object(obj_Audience_Top);
-	instance_activate_object(obj_Judges);
-
-    instance_activate_object(obj_Audience_Meter);
-	instance_activate_object(obj_Audience_Meter_Bar);
-
-	instance_activate_object(obj_Text_Score);
-	instance_activate_object(obj_Text_Hype);
+	instance_deactivate_object(obj_Cleaner_Dog);
+	instance_deactivate_object(obj_Tonya);
+	instance_deactivate_object(obj_Cleaner_Crack);
+	instance_deactivate_object(obj_Rabbid_Fan);
+	instance_deactivate_object(obj_Emoji_Nay);
+	instance_deactivate_object(obj_Emoji_Yay);
+	instance_deactivate_object(obj_Rose);
 	
     
     game_over_timer = 120;

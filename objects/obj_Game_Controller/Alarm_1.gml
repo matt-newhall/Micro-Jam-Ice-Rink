@@ -27,9 +27,9 @@ if (rnd_top_bottom > 0.5) {
 }
 
 var amount = 0;
-if (score_value >= 2000) {
+if (score_value >= 1000) {
 	amount = game_get_speed(gamespeed_fps) * 3
-} else if (score_value >= 500) {
+} else if (score_value >= 250) {
 	amount = game_get_speed(gamespeed_fps) * 5;
 } else if (score_value >= 50) {
 	amount = game_get_speed(gamespeed_fps) * 10;

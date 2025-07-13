@@ -19,6 +19,7 @@ switch (state) {
 				obj_Player.state = PlayerState.HIT;
 				
                 state = TonyaState.ANGRY;
+				audio_play_sound(snd_Angry_Tonya, 100, false);
                 anger_timer = 0;
                 frozen_x = x;
                 frozen_y = y;

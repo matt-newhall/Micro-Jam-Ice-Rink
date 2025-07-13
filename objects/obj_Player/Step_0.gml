@@ -4,6 +4,7 @@ var pressingH = keyboard_check(vk_left) || keyboard_check(vk_right);
 
 // Trick state
 if (!trick_cooldown && is_player_actionable && keyboard_check(ord("E"))) {
+	obj_Game_Controller.is_trick_spotlight_bonus = false;
 	state = PlayerState.TRICK;
 	trick_cooldown = true;
 }

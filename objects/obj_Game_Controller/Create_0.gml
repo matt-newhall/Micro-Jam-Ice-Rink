@@ -6,6 +6,7 @@ meter_value = 100;
 randomise()
 
 audio_play_sound(snd_Theme, 100, true);
+audio_play_sound(snd_Game_start, 100, false);
 
 function add_score(points) {
     score_value += points;
@@ -47,6 +48,9 @@ function handle_score_event(event_type) {
 			if (is_trick_spotlight_bonus) {
 				mul = 2;
 				is_trick_spotlight_bonus = false;
+				audio_play_sound(snd_Trick_Spotlight_Cheer, 100, false);
+			} else {
+				audio_play_sound(snd_Trick_Cheer, 100, false);
 			}
 			amount = 25 * mul;
             break;
@@ -57,6 +61,7 @@ function handle_score_event(event_type) {
 			amount = 50;
             break;
 		case "gd_dodge_success":
+			audio_play_sound(snd_Dodge_Success, 100, false);
 			amount = 10;
 			break;
 		case "bd_time_decrement":
@@ -143,3 +148,6 @@ fade_started = false;
 fade_timer = 0;
 music_volume = 1;
 music_fade_speed = 0.01;
+
+has_fan_increase_1_played = false;
+has_fan_increase_2_played = false;
