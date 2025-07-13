@@ -106,6 +106,17 @@ if (alarm[0]) {
     image_alpha = 1.0;
 }
 
+if (obj_Game_Controller.game_over) {
+	state = PlayerState.LOSS;
+}
+
+if (state == PlayerState.LOSS) {
+	image_alpha = 1.0;
+	invuln_flash = 0;
+	hspeed = 0;
+	vspeed = 0;
+}
+
 
 // Updates player sprite based on state
 switch (state) {
@@ -129,6 +140,9 @@ switch (state) {
 		break;
 	case PlayerState.HIT:
 		sprite_index = spr_player_hit;
+		break;
+	case PlayerState.LOSS:
+		sprite_index = spr_player_loses;
 		break;
 	default:
 	case PlayerState.NORMAL:

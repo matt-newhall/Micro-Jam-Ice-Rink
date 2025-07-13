@@ -10,7 +10,8 @@ enum PlayerState {
     HAS_ROSE,
 	JUMP,
 	TRICK,
-	HIT
+	HIT,
+	LOSS
 }
 
 state = PlayerState.NORMAL;

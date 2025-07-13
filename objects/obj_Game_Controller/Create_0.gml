@@ -135,3 +135,11 @@ spotlight_locations = [
     {x: global.play_left + padding + quarter_x, y: global.play_top + padding + quarter_y * 3},
     {x: global.play_left + padding + quarter_x * 3, y: global.play_top + padding + quarter_y * 3}
 ];
+
+game_over = false;
+game_over_timer = 0;
+fade_alpha = 0;
+fade_started = false;
+fade_timer = 0;
+music_volume = 1;
+music_fade_speed = 0.01;
