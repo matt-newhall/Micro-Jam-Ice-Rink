@@ -1,5 +1,5 @@
 // Cleaner Dog spawns
-if (obj_Game_Controller.score_value >= 50 && state == CleanerState.INACTIVE) {
+if (obj_Game_Controller.score_value >= 750 && state == CleanerState.INACTIVE) {
 	state = CleanerState.SPAWNING;
 }
 

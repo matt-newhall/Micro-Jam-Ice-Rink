@@ -4,16 +4,6 @@ max_speed = 5;
 frict = 0.06;
 
 
-// Check last frame movement
-wasPressingV = false;
-wasPressingH = false;
-
-is_decelerating_x = false;
-is_decelerating_y = false;
-target_speed_x = 0;
-target_speed_y = 0;
-
-
 // Generic Player State
 enum PlayerState {
     NORMAL,

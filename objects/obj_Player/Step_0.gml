@@ -27,8 +27,6 @@ if (is_player_idle) {
 	} else if (keyboard_check(vk_down)) {
 	    vspeed += accel;
 	    if (vspeed > max_speed) vspeed = max_speed;
-	} else if (abs(vspeed) > 0 && wasPressingV && !pressingV) {
-	    vspeed = vspeed / 2;
 	}
 
 	if (keyboard_check(vk_left)) {
@@ -37,34 +35,8 @@ if (is_player_idle) {
 	} else if (keyboard_check(vk_right)) {
 	    hspeed += accel;
 	    if (hspeed > max_speed) hspeed = max_speed;
-	} else if (abs(hspeed) > 0 && wasPressingH && !pressingH) {
-	    target_speed_x = hspeed / 2;
-	    is_decelerating_x = true;
-	}
-	
-	if (is_decelerating_x) {
-	    hspeed = lerp(hspeed, target_speed_x, 0.1);
-    
-	    // Stop when close enough to target
-	    if (abs(hspeed - target_speed_x) < 0.1) {
-	        hspeed = target_speed_x;
-	        is_decelerating_x = false;
-	    }
-	}
-	
-	if (is_decelerating_y) {
-	    hspeed = lerp(hspeed, target_speed_y, 0.1);
-    
-	    // Stop when close enough to target
-	    if (abs(hspeed - target_speed_y) < 0.1) {
-	        hspeed = target_speed_y;
-	        is_decelerating_y = false;
-	    }
 	}
 }
-
-wasPressingV = pressingV;
-wasPressingH = pressingH;
 
 
 // Change Player Sprite based on speed
@@ -96,10 +68,6 @@ if (y <= global.play_top || y + sprite_height >= global.play_bottom) {
 if ((x <= global.play_left || x + sprite_width >= global.play_right) ||
 	(y <= global.play_top || y + sprite_height >= (global.play_bottom))) {
 	obj_Game_Controller.handle_score_event("bd_wall_collision");
-	is_decelerating_x = false;
-	is_decelerating_y = false;
-	target_speed_x = 0;
-	target_speed_y = 0;
 	state = PlayerState.HIT;
 }
 

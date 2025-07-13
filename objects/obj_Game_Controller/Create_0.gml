@@ -5,6 +5,8 @@ meter_value = 100;
 
 randomise()
 
+audio_play_sound(snd_Theme, 100, true);
+
 function add_score(points) {
     score_value += points;
 }

@@ -56,6 +56,7 @@
     {"id":{"name":"obj_Text_Score","path":"objects/obj_Text_Score/obj_Text_Score.yy",},},
     {"id":{"name":"obj_Tonya","path":"objects/obj_Tonya/obj_Tonya.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"snd_Theme","path":"sounds/snd_Theme/snd_Theme.yy",},},
     {"id":{"name":"spr_Audience_Left","path":"sprites/spr_Audience_Left/spr_Audience_Left.yy",},},
     {"id":{"name":"spr_Audience_Meter_Bar","path":"sprites/spr_Audience_Meter_Bar/spr_Audience_Meter_Bar.yy",},},
     {"id":{"name":"spr_Audience_Meter","path":"sprites/spr_Audience_Meter/spr_Audience_Meter.yy",},},
