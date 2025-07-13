@@ -11,6 +11,16 @@ if (obj_Player.trick_cooldown && obj_Player.is_player_idle && !alarm[2]) {
 	alarm[2] = game_get_speed(gamespeed_fps) * 3;
 }
 
+if (score_value >= 1500 && !is_first_tonya_spawned && !alarm[4]) {
+	is_first_tonya_spawned = true;
+	alarm[4] = game_get_speed(gamespeed_fps) * 0.05;
+}
+
+if (score_value >= 3000 && !is_second_tonya_spawned && !alarm[5]) {
+	is_second_tonya_spawned = true;
+	alarm[5] = game_get_speed(gamespeed_fps) * 0.05;
+}
+
 
 if (score_value >= 100 && !spotlight_triggered) {
     spotlight_triggered = true;

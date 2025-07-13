@@ -23,6 +23,20 @@ if (y < global.play_top || y + sprite_height > global.play_bottom) {
 	alarm[1] = game_get_speed(gamespeed_fps) * 1;
 }
 
+// If player has iframes, flash player
+if (alarm[1]) {
+    invuln_flash += 1;
+    
+    // Flash every few frames
+    if (invuln_flash mod 8 < 4) {
+        image_alpha = 0.5;
+    } else {
+        image_alpha = 1.0;
+    }
+} else {
+    image_alpha = 1.0;
+}
+
 
 if (place_meeting(x, y, obj_Player) && moving && !obj_Player.is_player_invuln && obj_Player.state != PlayerState.JUMP) {
 	obj_Game_Controller.handle_score_event("bd_fan_collision");

@@ -113,6 +113,11 @@ if (place_meeting(x, y, obj_Cleaner_Dog) && !is_player_invuln && state != Player
 	vspeed = -(vspeed / 2);
 }
 
+if (place_meeting(x, y, obj_Tonya) && !is_player_invuln && state != PlayerState.JUMP) {
+	hspeed = -(hspeed / 2);
+	vspeed = -(vspeed / 2);
+}
+
 
 // Player was hit, trigger flashing for 1.5s
 if (state == PlayerState.HIT && !alarm[0]) {

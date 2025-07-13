@@ -15,7 +15,7 @@ function change_meter(amount) {
 }
 
 function handle_rose_creation(amount) {
-    var min_distance = 80; // Adjust this value for spacing
+    var min_distance = 80;
     
     repeat(amount) {
         var attempts = 0;
@@ -88,8 +88,7 @@ function handle_score_event(event_type) {
 			}
 			break;
     }
-	
-	// TODO: add spotlight (*2 score)
+
 	change_meter(amount)
 	if (amount > 0) {
 		obj_Emoji_Yay.start_popup();
@@ -114,6 +113,8 @@ global.play_bottom = global.play_top + play_height;
 is_initial_fan_spawned = false;
 spotlight_triggered = false;
 is_trick_spotlight_bonus = false;
+is_first_tonya_spawned = false;
+is_second_tonya_spawned = false;
 
 
 

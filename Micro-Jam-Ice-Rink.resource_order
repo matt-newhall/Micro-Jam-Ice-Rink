@@ -34,6 +34,7 @@
     {"name":"obj_Spotlight","order":14,"path":"objects/obj_Spotlight/obj_Spotlight.yy",},
     {"name":"obj_Text_Hype","order":11,"path":"objects/obj_Text_Hype/obj_Text_Hype.yy",},
     {"name":"obj_Text_Score","order":12,"path":"objects/obj_Text_Score/obj_Text_Score.yy",},
+    {"name":"obj_Tonya","order":17,"path":"objects/obj_Tonya/obj_Tonya.yy",},
     {"name":"spr_Audience_Left","order":6,"path":"sprites/spr_Audience_Left/spr_Audience_Left.yy",},
     {"name":"spr_Audience_Meter_Bar","order":21,"path":"sprites/spr_Audience_Meter_Bar/spr_Audience_Meter_Bar.yy",},
     {"name":"spr_Audience_Meter","order":4,"path":"sprites/spr_Audience_Meter/spr_Audience_Meter.yy",},
@@ -60,5 +61,8 @@
     {"name":"spr_rose","order":11,"path":"sprites/spr_rose/spr_rose.yy",},
     {"name":"spr_score_board","order":19,"path":"sprites/spr_score_board/spr_score_board.yy",},
     {"name":"spr_spotlight","order":22,"path":"sprites/spr_spotlight/spr_spotlight.yy",},
+    {"name":"spr_tonya_angry","order":30,"path":"sprites/spr_tonya_angry/spr_tonya_angry.yy",},
+    {"name":"spr_tonya_idle","order":28,"path":"sprites/spr_tonya_idle/spr_tonya_idle.yy",},
+    {"name":"spr_tonya_skate","order":29,"path":"sprites/spr_tonya_skate/spr_tonya_skate.yy",},
   ],
 }
