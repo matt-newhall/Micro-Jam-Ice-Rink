@@ -1,3 +1,3 @@
-if (state == "in_jump") {
-	state = "idle";
+if (state == PlayerState.JUMP) {
+	state = PlayerState.NORMAL;
 }

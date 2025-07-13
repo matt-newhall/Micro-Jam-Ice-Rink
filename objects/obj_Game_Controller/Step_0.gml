@@ -10,6 +10,6 @@ if (!alarm[1]) {
 	}
 }
 
-if (obj_Player.trick_cooldown && obj_Player.state == "idle" && !alarm[2]) {
+if (obj_Player.trick_cooldown && obj_Player.is_player_idle && !alarm[2]) {
 	alarm[2] = game_get_speed(gamespeed_fps) * 3;
 }

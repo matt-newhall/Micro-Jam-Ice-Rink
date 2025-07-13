@@ -1,6 +1,34 @@
+// Constants for player movement
+accel = 0.2;
+max_speed = 5;
+frict = 0.06;
+
+
+// Check last frame movement
+wasPressingV = false;
+wasPressingH = false;
+
+is_decelerating_x = false;
+is_decelerating_y = false;
+target_speed_x = 0;
+target_speed_y = 0;
+
+
+// Generic Player State
+enum PlayerState {
+    NORMAL,
+    HAS_ROSE,
+	JUMP,
+	TRICK,
+	HIT
+}
+
+state = PlayerState.NORMAL;
+
+is_player_idle = true;
+is_player_actionable = true;
+
+is_player_invuln = false;
 invuln_flash = 0;
-invuln = false;
 
 trick_cooldown = false;
-
-state = "idle"

@@ -40,40 +40,29 @@ function handle_score_event(event_type) {
 			amount = -5;
 			break;
 		case "bd_wall_collision":
-			if (obj_Player.state == "in_trick" || obj_Player.state == "in_jump") {
-				obj_Player.state = "idle";
-			}
 			amount = -15;
 			break;
 		case "bd_construction_collision":
-			if (!obj_Player.invuln && obj_Player.state != "in_jump") {
-				if (obj_Player.state == "in_trick") {
-					obj_Player.state = "idle";
-				}
+			if (!obj_Player.is_player_invuln && obj_Player.state != PlayerState.JUMP) {
+				obj_Player.state = PlayerState.HIT;
 				amount = -15;
 			}
 			break;
 		case "bd_fan_collision":
-			if (!obj_Player.invuln && obj_Player.state != "in_jump") {
-				if (obj_Player.state == "in_trick") {
-					obj_Player.state = "idle";
-				}
+			if (!obj_Player.is_player_invuln && obj_Player.state != PlayerState.JUMP) {
+				obj_Player.state = PlayerState.HIT
 				amount = -20;
 			}
 			break;
 		case "bd_cleaner_collision":
-			if (!obj_Player.invuln && obj_Player.state != "in_jump") {
-				if (obj_Player.state == "in_trick") {
-					obj_Player.state = "idle";
-				}
+			if (!obj_Player.is_player_invuln && obj_Player.state != PlayerState.JUMP) {
+				obj_Player.state = PlayerState.HIT;
 				amount = -30;
 			}
 			break;
 		case "bd_tonya_collision":
-			if (!obj_Player.invuln && obj_Player.state != "in_jump") {
-				if (obj_Player.state == "in_trick") {
-					obj_Player.state = "idle";
-				}
+			if (!obj_Player.is_player_invuln && obj_Player.state != PlayerState.JUMP) {
+				obj_Player.state = PlayerState.HIT;
 				amount = -50;
 			}
 			break;
@@ -102,7 +91,7 @@ var rnd_y = random_range(0, 1);
 var rnd_top_bottom = random_range(0, 1);
 
 if (rnd_x > 0.5) {
-	x_pos = global.play_right-100;
+	x_pos = global.play_right-200;
 } else {
 	x_pos = global.play_left;
 }
@@ -110,13 +99,13 @@ if (rnd_x > 0.5) {
 if (rnd_y > 0.5) {
 	y_pos = global.play_top;
 } else {
-	y_pos = global.play_bottom-100;
+	y_pos = global.play_bottom-200;
 }
 
 if (rnd_top_bottom > 0.5) {
-	pos = random_range(global.play_top, global.play_bottom-100);
+	pos = random_range(global.play_top, global.play_bottom-200);
 	instance_create_layer(x_pos, pos, layer, obj_Rabbid_Fan);
 } else {
-	pos = random_range(global.play_left, global.play_right-100);
+	pos = random_range(global.play_left, global.play_right-200);
 	instance_create_layer(pos, y_pos, layer, obj_Rabbid_Fan);
 }

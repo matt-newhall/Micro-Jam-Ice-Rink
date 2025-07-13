@@ -1,6 +1,6 @@
 var fill_percentage;
 
-if (obj_Player.state == "in_trick") {
+if (obj_Player.state == PlayerState.TRICK) {
     fill_percentage = 0;
 } else if (obj_Player.trick_cooldown) {
     var total_cooldown_time = game_get_speed(gamespeed_fps) * 3;

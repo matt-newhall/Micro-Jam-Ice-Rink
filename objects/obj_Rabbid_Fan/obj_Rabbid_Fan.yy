@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"sprite_Rabbid_Fan",
-    "path":"sprites/sprite_Rabbid_Fan/sprite_Rabbid_Fan.yy",
+    "name":"spr_Rabbid_Fan",
+    "path":"sprites/spr_Rabbid_Fan/spr_Rabbid_Fan.yy",
   },
   "spriteMaskId":null,
   "visible":true,
