@@ -103,6 +103,11 @@ if ((x <= global.play_left || x + sprite_width >= global.play_right) ||
 	state = PlayerState.HIT;
 }
 
+if (place_meeting(x, y, obj_Rabbid_Fan) && obj_Rabbid_Fan.moving && !is_player_invuln && state != PlayerState.JUMP) {
+	hspeed = -(hspeed / 2);
+	vspeed = -(vspeed / 2);
+}
+
 
 // Player was hit, trigger flashing for 1.5s
 if (state == PlayerState.HIT && !alarm[0]) {
