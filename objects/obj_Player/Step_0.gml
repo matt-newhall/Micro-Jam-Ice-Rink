@@ -108,6 +108,11 @@ if (place_meeting(x, y, obj_Rabbid_Fan) && obj_Rabbid_Fan.moving && !is_player_i
 	vspeed = -(vspeed / 2);
 }
 
+if (place_meeting(x, y, obj_Cleaner_Dog) && !is_player_invuln && state != PlayerState.JUMP) {
+	hspeed = -(hspeed / 2);
+	vspeed = -(vspeed / 2);
+}
+
 
 // Player was hit, trigger flashing for 1.5s
 if (state == PlayerState.HIT && !alarm[0]) {
@@ -140,7 +145,7 @@ switch (state) {
 	case PlayerState.JUMP:
 		sprite_index = spr_player_jump;
 		if (!alarm[2]) {
-			alarm[2] = game_get_speed(gamespeed_fps) * 0.35;
+			alarm[2] = game_get_speed(gamespeed_fps) * 0.5;
 		}
 		break;
 	case PlayerState.TRICK:
