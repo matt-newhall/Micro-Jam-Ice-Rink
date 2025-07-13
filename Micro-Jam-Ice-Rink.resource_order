@@ -19,6 +19,7 @@
   "ResourceOrderSettings":[
     {"name":"font_Large","order":1,"path":"fonts/font_Large/font_Large.yy",},
     {"name":"obj_Audience_Left","order":4,"path":"objects/obj_Audience_Left/obj_Audience_Left.yy",},
+    {"name":"obj_Audience_Meter_Bar","order":13,"path":"objects/obj_Audience_Meter_Bar/obj_Audience_Meter_Bar.yy",},
     {"name":"obj_Audience_Meter","order":2,"path":"objects/obj_Audience_Meter/obj_Audience_Meter.yy",},
     {"name":"obj_Audience_Top","order":5,"path":"objects/obj_Audience_Top/obj_Audience_Top.yy",},
     {"name":"obj_Boot","order":10,"path":"objects/obj_Boot/obj_Boot.yy",},
@@ -31,6 +32,7 @@
     {"name":"obj_Text_Hype","order":11,"path":"objects/obj_Text_Hype/obj_Text_Hype.yy",},
     {"name":"obj_Text_Score","order":12,"path":"objects/obj_Text_Score/obj_Text_Score.yy",},
     {"name":"spr_Audience_Left","order":6,"path":"sprites/spr_Audience_Left/spr_Audience_Left.yy",},
+    {"name":"spr_Audience_Meter_Bar","order":21,"path":"sprites/spr_Audience_Meter_Bar/spr_Audience_Meter_Bar.yy",},
     {"name":"spr_Audience_Meter","order":4,"path":"sprites/spr_Audience_Meter/spr_Audience_Meter.yy",},
     {"name":"spr_Audience_Top","order":7,"path":"sprites/spr_Audience_Top/spr_Audience_Top.yy",},
     {"name":"spr_background","order":3,"path":"sprites/spr_background/spr_background.yy",},
@@ -49,6 +51,5 @@
     {"name":"spr_rink","order":2,"path":"sprites/spr_rink/spr_rink.yy",},
     {"name":"spr_rose","order":11,"path":"sprites/spr_rose/spr_rose.yy",},
     {"name":"spr_score_board","order":19,"path":"sprites/spr_score_board/spr_score_board.yy",},
-    {"name":"Sprite21","order":20,"path":"sprites/Sprite21/Sprite21.yy",},
   ],
 }

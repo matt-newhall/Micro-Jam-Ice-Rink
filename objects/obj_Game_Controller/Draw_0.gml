@@ -4,4 +4,4 @@ var new_val = (max_digits-length)*"0" + string(score_value);
 
 draw_set_font(font_Large);
 draw_set_color(c_black);
-draw_text(x+20, y+32, new_val);
+draw_text(x, y, new_val);
