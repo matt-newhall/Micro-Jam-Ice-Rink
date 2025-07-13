@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Rose",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_Text_Hype",
+  "eventList":[],
   "managed":true,
-  "name":"obj_Rose",
+  "name":"obj_Text_Hype",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rose",
-    "path":"sprites/spr_rose/spr_rose.yy",
+    "name":"spr_crowd_hype",
+    "path":"sprites/spr_crowd_hype/spr_crowd_hype.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -1,11 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_Rose",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"obj_Text_Score",
+  "eventList":[],
   "managed":true,
-  "name":"obj_Rose",
+  "name":"obj_Text_Score",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -30,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rose",
-    "path":"sprites/spr_rose/spr_rose.yy",
+    "name":"spr_score_board",
+    "path":"sprites/spr_score_board/spr_score_board.yy",
   },
   "spriteMaskId":null,
   "visible":true,

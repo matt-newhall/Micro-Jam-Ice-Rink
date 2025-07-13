@@ -14,7 +14,7 @@ if (is_player_actionable && keyboard_check(vk_space)) {
 }
 
 // Collect rose state
-if (place_meeting(x, y, obj_rose) && is_player_idle) {
+if (place_meeting(x, y, obj_Rose) && is_player_idle) {
 	state = PlayerState.HAS_ROSE;
 }
 

@@ -18,7 +18,7 @@ function handle_rose_creation(amount) {
 	var y_pos = random_range(global.play_bottom-20, global.play_top+20)
 	var x_pos = random_range(global.play_left+20, global.play_right-20)
 
-	instance_create_layer(x_pos, y_pos, layer, obj_rose);
+	instance_create_layer(x_pos, y_pos, layer, obj_Rose);
 }
 
 function handle_score_event(event_type) {
@@ -86,26 +86,4 @@ global.play_top = 112;
 global.play_right = global.play_left + play_width;
 global.play_bottom = global.play_top + play_height;
 
-var rnd_x = random_range(0, 1);
-var rnd_y = random_range(0, 1);
-var rnd_top_bottom = random_range(0, 1);
-
-if (rnd_x > 0.5) {
-	x_pos = global.play_right-200;
-} else {
-	x_pos = global.play_left;
-}
-
-if (rnd_y > 0.5) {
-	y_pos = global.play_top;
-} else {
-	y_pos = global.play_bottom-200;
-}
-
-if (rnd_top_bottom > 0.5) {
-	pos = random_range(global.play_top, global.play_bottom-200);
-	instance_create_layer(x_pos, pos, layer, obj_Rabbid_Fan);
-} else {
-	pos = random_range(global.play_left, global.play_right-200);
-	instance_create_layer(pos, y_pos, layer, obj_Rabbid_Fan);
-}
+is_initial_fan_spawned = false;

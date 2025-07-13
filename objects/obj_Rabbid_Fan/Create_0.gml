@@ -7,3 +7,5 @@ current_y = 0;
 target_y = 0;
 
 given_jump_bonus = false;
+
+image_speed = 0;
