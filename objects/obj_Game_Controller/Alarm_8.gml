@@ -1,0 +1,1 @@
+special_triggered = false;

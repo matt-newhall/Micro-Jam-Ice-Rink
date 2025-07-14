@@ -58,6 +58,13 @@ function handle_score_event(event_type) {
 			amount = 10;
             break;
         case "gd_special_success":
+			if (is_trick_spotlight_bonus) {
+				mul = 2;
+				is_trick_spotlight_bonus = false;
+				audio_play_sound(snd_Special_Spotlight_Cheer, 100, false);
+			} else {
+				audio_play_sound(snd_Special_Cheer, 100, false);
+			}
 			amount = 50;
             break;
 		case "gd_dodge_success":
@@ -109,6 +116,10 @@ function reset_spotlight_system() {
     alarm[3] = game_get_speed(gamespeed_fps) * (8 + random(10));
 }
 
+function reset_special_system() {
+	alarm[8] = game_get_speed(gamespeed_fps) * (10 + random(15));
+}
+
 var play_width = 1290;
 var play_height = 945;
 
@@ -122,6 +133,8 @@ spotlight_triggered = false;
 is_trick_spotlight_bonus = false;
 is_first_tonya_spawned = false;
 is_second_tonya_spawned = false;
+
+special_triggered = false;
 
 
 

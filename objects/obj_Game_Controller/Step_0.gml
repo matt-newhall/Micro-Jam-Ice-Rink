@@ -43,6 +43,16 @@ if (score_value >= 100 && !spotlight_triggered) {
     instance_create_layer(spawn_x, spawn_y, layer, obj_Spotlight);
 }
 
+if (!special_triggered && score_value >= 125) {
+    special_triggered = true;
+
+    var location_index = irandom(3);
+    var spawn_x = spotlight_locations[location_index].x;
+    var spawn_y = spotlight_locations[location_index].y;
+
+    instance_create_layer(spawn_x, spawn_y, layer, obj_Special);
+}
+
 if (meter_value <= 0 && !game_over) {
     game_over = true;
 	audio_play_sound(snd_Game_over, 100, false);

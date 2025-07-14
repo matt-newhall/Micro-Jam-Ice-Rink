@@ -11,7 +11,8 @@ enum PlayerState {
 	JUMP,
 	TRICK,
 	HIT,
-	LOSS
+	LOSS,
+	SPECIAL
 }
 
 state = PlayerState.NORMAL;
@@ -23,3 +24,5 @@ is_player_invuln = false;
 invuln_flash = 0;
 
 trick_cooldown = false;
+
+special_trick = spr_player_special1;

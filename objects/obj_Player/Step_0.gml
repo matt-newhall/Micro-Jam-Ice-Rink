@@ -5,7 +5,17 @@ var pressingH = keyboard_check(vk_left) || keyboard_check(vk_right);
 // Trick state
 if (!trick_cooldown && is_player_actionable && keyboard_check(ord("E"))) {
 	obj_Game_Controller.is_trick_spotlight_bonus = false;
-	state = PlayerState.TRICK;
+	if (place_meeting(x, y, obj_Special)) {
+		state = PlayerState.SPECIAL;
+		var random_num = irandom_range(1, 2);
+		if (random_num == 1) {
+			special_trick = spr_player_special1;
+		} else {
+			special_trick = spr_player_special2;
+		}
+	} else {
+		state = PlayerState.TRICK;
+	}
 	trick_cooldown = true;
 }
 
@@ -135,6 +145,12 @@ switch (state) {
 		break;
 	case PlayerState.TRICK:
 		sprite_index = spr_player_trick;
+		if (!alarm[1]) {
+			alarm[1] = game_get_speed(gamespeed_fps);
+		}
+		break;
+	case PlayerState.SPECIAL:
+		sprite_index = special_trick;
 		if (!alarm[1]) {
 			alarm[1] = game_get_speed(gamespeed_fps);
 		}
